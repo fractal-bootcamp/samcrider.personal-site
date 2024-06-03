@@ -1,7 +1,9 @@
 import Component from "./component";
+import { useTimeLineData } from "./data";
 
 const ProjectTimeLine = () => {
-  return <Component />;
+  const { projects } = useTimeLineData();
+  return <Component projects={projects} />;
 };
 
 export default ProjectTimeLine;

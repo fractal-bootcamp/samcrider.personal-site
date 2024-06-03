@@ -1,11 +1,12 @@
 import ProjectCard from "~/components/base/ProjectCard/component";
+import { Fields } from "./types";
 
-const Project = () => {
+const Project = ({ project }: Fields) => {
   return (
     <li>
       <hr />
       <div className="timeline-start timeline-box">
-        <ProjectCard />
+        <ProjectCard project={project} />
       </div>
       <div className="timeline-middle">
         <svg
@@ -21,7 +22,7 @@ const Project = () => {
           />
         </svg>
       </div>
-      <div className="timeline-end">beginning</div>
+      <div className="timeline-end">{project.timelineTitle}</div>
       <hr />
     </li>
   );
