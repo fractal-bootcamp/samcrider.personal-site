@@ -1,8 +1,12 @@
+import ProjectCard from "~/components/base/ProjectCard/component";
+
 const Project = () => {
   return (
     <li>
       <hr />
-      <div className="timeline-start timeline-box">Project one </div>
+      <div className="timeline-start timeline-box">
+        <ProjectCard />
+      </div>
       <div className="timeline-middle">
         <svg
           xmlns="http://www.w3.org/2000/svg"

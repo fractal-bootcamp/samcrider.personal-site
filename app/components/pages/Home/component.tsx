@@ -31,6 +31,9 @@ const Component = () => {
           ]}
         />
       </div>
+      <div className="w-full text-center">
+        <button className="btn btn-wide">MY WORK</button>
+      </div>
       <ProjectTimeLine />
     </div>
   );

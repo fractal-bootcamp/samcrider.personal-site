@@ -19,7 +19,7 @@ const Card = ({ image, text, link, links }: Fields) => {
         {text ? <p>{text.text}</p> : null}
         {link ? (
           <div className="card-actions">
-            <a href={link} className="btn btn-primary">
+            <a href={link} className="btn btn-accent">
               Check It Out
             </a>
           </div>
@@ -28,7 +28,7 @@ const Card = ({ image, text, link, links }: Fields) => {
           <div className="card-actions">
             {links.map((l, index) => {
               return (
-                <a key={index} href={l.link}>
+                <a className="btn btn-accent" key={index} href={l.link}>
                   {l.name}
                 </a>
               );
