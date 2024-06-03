@@ -3,8 +3,8 @@ import Home from "~/components/pages/Home";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Sam Crider" },
+    { name: "description", content: "Welcome to my personal site!" },
   ];
 };
 
