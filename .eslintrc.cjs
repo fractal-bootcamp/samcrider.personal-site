@@ -9,6 +9,7 @@ module.exports = {
   root: true,
   parserOptions: {
     ecmaVersion: "latest",
+    tsconfigRootDir: "./",
     sourceType: "module",
     ecmaFeatures: {
       jsx: true,
@@ -55,8 +56,13 @@ module.exports = {
       files: ["**/*.{ts,tsx}"],
       plugins: ["@typescript-eslint", "import"],
       parser: "@typescript-eslint/parser",
+      parserOptions: {
+        project: "tsconfig.json",
+        sourceType: "module",
+      },
       settings: {
         "import/internal-regex": "^~/",
+
         "import/resolver": {
           node: {
             extensions: [".ts", ".tsx"],
