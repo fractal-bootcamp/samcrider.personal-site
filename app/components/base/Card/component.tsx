@@ -20,7 +20,7 @@ const Card = ({ image, text, link, links }: Fields) => {
         {link ? (
           <div className="card-actions">
             <a href={link} className="btn btn-accent">
-              Check It Out
+              Click me!
             </a>
           </div>
         ) : null}

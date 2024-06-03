@@ -3,7 +3,12 @@ import s from "./styles.module.css";
 
 const Component = () => {
   return (
-    <ul className={`timeline ${s.timeline} ${s.timelineContainer}`}>
+    <ul
+      className={`timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ${s.timeline} ${s.timelineContainer}`}
+    >
+      <Project />
+      <Project />
+      <Project />
       <Project />
       <Project />
     </ul>
