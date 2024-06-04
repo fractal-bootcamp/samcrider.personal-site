@@ -1,20 +1,16 @@
-const ProjectCard = () => {
+import { Fields } from "./types";
+
+const ProjectCard = ({ project }: Fields) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl image-full">
       <figure>
-        <img src="/Text-To-Audio.png" alt="Shoes" />
+        <img src={project.projectImage} alt="Shoes" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Text to Audio</h2>
-        <p>
-          This app speaks text aloud and then produces an audio recording of it
-          for your convenience
-        </p>
+        <h2 className="card-title">{project.projectTitle}</h2>
+        <p>{project.projectDescription}</p>
         <div className="card-actions justify-end">
-          <a
-            className="btn btn-accent"
-            href="https://text2audiobysam.netlify.app/"
-          >
+          <a className="btn btn-accent" href={project.projectLink}>
             Live Preview
           </a>
         </div>
