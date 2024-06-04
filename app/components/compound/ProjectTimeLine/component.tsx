@@ -8,7 +8,8 @@ const Component = ({ projects }: Fields) => {
       className={`timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ${s.timeline} ${s.timelineContainer}`}
     >
       {projects.map((project) => {
-        return <Project project={project} />;
+        // handleTimelineFlip();
+        return <Project key={project.id} project={project} />;
       })}
     </ul>
   );
