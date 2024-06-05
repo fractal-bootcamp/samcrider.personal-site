@@ -10,7 +10,11 @@ const ProjectCard = ({ project }: Fields) => {
         <h2 className="card-title">{project.projectTitle}</h2>
         <p>{project.projectDescription}</p>
         <div className="card-actions justify-end">
-          <a className="btn btn-accent" href={project.projectLink}>
+          <a
+            className="btn btn-accent"
+            href={project.projectLink}
+            target="_blank"
+          >
             Live Preview
           </a>
         </div>
