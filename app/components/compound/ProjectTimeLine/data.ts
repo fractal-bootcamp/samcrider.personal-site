@@ -23,12 +23,13 @@ export const useTimeLineData = () => {
       id: 1,
     },
     {
-      timelineTitle: "First Project",
-      projectTitle: "Text to Audio",
+      timelineTitle: "June 6, 2024",
+      projectTitle: "Prisma w/ Postgres",
       projectDescription:
-        "This app speaks text aloud and then produces an audio recording of it for your convenience",
-      projectLink: "https://text2audiobysam.netlify.app/",
-      projectImage: "/Text-To-Audio.png",
+        "Here I was familiarizing myself with prisma and postgres. This work took me one hour.",
+      projectLink:
+        "https://github.com/fractal-bootcamp/samcrider.database-boilerplate",
+      projectImage: "/databasePractice.png",
       id: 2,
     },
     {
