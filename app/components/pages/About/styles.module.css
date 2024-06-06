@@ -1,49 +1,22 @@
-.homeContainer {
+.topContainer {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-}
-
-.upButton {
-  position: fixed;
-  bottom: 0;
-  margin: 24px;
-  right: 0;
-}
-
-.greetPage {
-  padding: 24px;
-  padding-top: 100px;
-  display: flex;
-  gap: 72px;
-  padding-bottom: 150px;
-  flex-direction: column;
-}
-
-.cardContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.projectPage {
-  padding-top: 150px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
 }
 
 .titleContainer {
   color: #000;
   font-family: "Work Sans", sans-serif;
   font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .title {
   font-size: 5rem;
   text-transform: uppercase;
   text-align: center;
+  padding: 12px 48px;
 }
 
 span {
@@ -62,4 +35,39 @@ span {
     background-repeat: round;
     background-position: 0em;
   }
+}
+
+.link {
+  margin: 48px;
+}
+
+.aboutContainer {
+  display: flex;
+  padding: 24px 48px;
+  align-items: center;
+}
+
+.imageDiv {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  height: 300px;
+  width: 200px;
+  border-radius: 50px;
+}
+
+.paragraphContainer {
+  display: flex;
+  padding: 48px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  flex-direction: column;
+  gap: 48px;
+  width: 50%;
+  color: #191919;
+  font-size: 20px;
+  font-weight: 400;
 }

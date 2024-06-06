@@ -7,7 +7,7 @@ import s from "./styles.module.css";
 const Component = () => {
   return (
     <div className={s.homeContainer}>
-      <div className={s.greetPage}>
+      <div id="topOfPage" className={s.greetPage}>
         <div className={s.cardContainer}>
           <Card
             image="/criderSelfie.PNG"
@@ -42,7 +42,7 @@ const Component = () => {
             to="projects"
             smooth
             duration={500}
-            className="btn btn-wide btn-lg btn-warning text-current"
+            className="btn btn-wide btn-lg btn-warning text-black"
           >
             MY WORK
           </Link>
@@ -52,13 +52,21 @@ const Component = () => {
       <div className={s.projectPage}>
         <div className={s.titleContainer}>
           <p className={s.title} id="projects">
-            <span>Projects</span>
+            <span className="text-neutral-content">Projects</span>
           </p>
         </div>
         <div className="pb-20">
           <ProjectTimeLine />
         </div>
       </div>
+      <Link
+        to="topOfPage"
+        smooth
+        duration={500}
+        className={`btn btn-medium btn-warning text-black text-6xl ${s.upButton}`}
+      >
+        ^
+      </Link>
     </div>
   );
 };

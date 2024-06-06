@@ -28,7 +28,12 @@ const Card = ({ image, text, link, links }: Fields) => {
           <div className="card-actions">
             {links.map((l, index) => {
               return (
-                <a className="btn btn-accent" key={index} href={l.link}>
+                <a
+                  className="btn btn-accent"
+                  key={index}
+                  href={l.link}
+                  target="_blank"
+                >
                   {l.name}
                 </a>
               );

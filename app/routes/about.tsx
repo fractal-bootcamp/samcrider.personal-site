@@ -10,7 +10,13 @@ import About from "~/components/pages/About";
 
 const Page = () => {
   return (
-    <div>
+    <div
+      style={{
+        fontFamily: "system-ui, sans-serif",
+        lineHeight: "1.8",
+        height: "100vh",
+      }}
+    >
       <About />
     </div>
   );
