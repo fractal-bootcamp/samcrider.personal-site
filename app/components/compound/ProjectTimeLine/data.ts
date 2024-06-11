@@ -33,12 +33,12 @@ export const useTimeLineData = () => {
       id: 2,
     },
     {
-      timelineTitle: "First Project",
-      projectTitle: "Text to Audio",
+      timelineTitle: "June 10, 2024",
+      projectTitle: "Total Survey",
       projectDescription:
-        "This app speaks text aloud and then produces an audio recording of it for your convenience",
-      projectLink: "https://text2audiobysam.netlify.app/",
-      projectImage: "/Text-To-Audio.png",
+        "Total Survey is an anonymous app that allows users to create, take, and view the results of surveys",
+      projectLink: "https://totalsurvey.netlify.app/",
+      projectImage: "/totalSurvey.png",
       id: 3,
     },
     {
