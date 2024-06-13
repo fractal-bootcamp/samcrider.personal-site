@@ -52,7 +52,7 @@ const Component = () => {
       <div className={s.projectPage}>
         <div className={s.titleContainer}>
           <p className={s.title} id="projects">
-            <span className="text-neutral-content">Projects</span>
+            <span className="text-content">Projects</span>
           </p>
         </div>
         <div className="pb-20">

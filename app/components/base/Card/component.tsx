@@ -2,7 +2,7 @@ import { Fields } from "./types";
 
 const Card = ({ image, text, link, links }: Fields) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-lg shadow-t-2 shadow-neutral-content">
+    <div className="card w-96 bg-base-100 shadow-lg">
       <figure className="px-10 pt-10">
         {image ? (
           <img
