@@ -9,7 +9,7 @@ export const useTimeLineData = () => {
       projectDescription:
         "I wrote this Python script to email me a list of hot startups and jobs every day. It runs in a CronJob.",
       projectLink: "https://github.com/SamuelRCrider/Job-Finder",
-      projectImage: "/Text-To-Audio.png",
+      projectImage: "/jobFinder.png",
       id: 0,
     },
     {
@@ -49,6 +49,15 @@ export const useTimeLineData = () => {
       projectLink: "https://totalsurvey.netlify.app/",
       projectImage: "/totalSurvey.png",
       id: 4,
+    },
+    {
+      timelineTitle: "June 18, 2024",
+      projectTitle: "Tic Tac Toe",
+      projectDescription:
+        "This project uses websockets, prisma, postgreSQL, and supabase to bring users traditional tic tac toe and online multiplayer!",
+      projectLink: "https://frontend-tictactoe-z8th.onrender.com",
+      projectImage: "/tictactoe.png",
+      id: 5,
     },
   ];
 
