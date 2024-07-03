@@ -4,17 +4,6 @@ import s from "./styles.module.css";
 const Component = () => {
   return (
     <div className={s.topContainer}>
-      <div className={s.titleContainer}>
-        <p className={s.title} id="projects">
-          <span className="text-content">HEY! GREAT TO MEET YOU.</span>
-        </p>
-        <a
-          href="/"
-          className={`btn btn-medium btn-warning text-content ${s.link}`}
-        >
-          HOME
-        </a>
-      </div>
       <div className={s.aboutContainer}>
         <div className={s.paragraphContainer}>
           <p className="text-content">
