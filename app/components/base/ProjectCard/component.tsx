@@ -2,7 +2,7 @@ import { Fields } from "./types";
 
 const ProjectCard = ({ project }: Fields) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl image-full">
+    <div className="card z-0 w-96 bg-base-100 shadow-xl image-full">
       <figure>
         <img src={project.projectImage} alt="Shoes" />
       </figure>

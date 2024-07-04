@@ -29,6 +29,19 @@ const Links = () => {
           <img src="/linkedin-mark.png" alt="linkedin" className="h-[50%]" />
         </a>
       </motion.div>
+      <motion.div
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      >
+        <a
+          target="_blank"
+          href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTSDxBXQqrTllMsbpXZpWNkTkQSZrQshvzWTldlbSBFtqvHpRrRdrDkcpwzFFWLQWPZZDs"
+          className="w-96 h-96 flex justify-center items-center font-bold"
+        >
+          <img src="/gmail-mark.png" alt="gmail" className="h-[45%]" />
+        </a>
+      </motion.div>
     </div>
   );
 };

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import SecretModal from "../Modal/component";
+import { Fields } from "./types";
 
-const NavBar = () => {
+const NavBar = ({ handleClick }: Fields) => {
   return (
     <div className="navbar bg-base-100 p-6">
       <div className="navbar-start">
@@ -33,13 +34,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <Link
-                disabled
-                className="opacity-50 pointer-events-none"
-                to="thoughts"
-                smooth
-                duration={500}
-              >
+              <Link onClick={handleClick} to="thoughts" smooth duration={500}>
                 Thoughts
               </Link>
             </li>
@@ -65,13 +60,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link
-              disabled
-              className="opacity-50 pointer-events-none"
-              to="thoughts"
-              smooth
-              duration={500}
-            >
+            <Link onClick={handleClick} to="thoughts" smooth duration={500}>
               Thoughts
             </Link>
           </li>

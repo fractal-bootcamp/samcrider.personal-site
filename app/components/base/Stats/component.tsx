@@ -2,6 +2,7 @@ import s from "./styles.module.css";
 
 const stats = [
   "React.js",
+  "Go",
   "Python",
   "TypeScript",
   "Prisma",
