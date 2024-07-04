@@ -15,8 +15,20 @@ const SecretModal = () => {
         <div className="modal-box">
           <h3 className="font-bold text-lg">Shhh, super secret modal</h3>
           <p className="py-4">
-            I'm currently unemployed... maybe you can help? (assuming you're
-            hiring)
+            If you've gotten this far, you're clearly interested ; )
+            <br />
+            Say hello at{" "}
+            <a className="text-[blue] underline" href="mailto:sam@crider.dev">
+              samrobertcrider@gmail.com
+            </a>
+            <br />
+            Some things you could say:
+            <br />
+            - Hey Sam! I've got a job for you!
+            <br />
+            - Hey Sam! My daughter would love you!
+            <br />
+            ... thats all the ideas I have for now.
           </p>
         </div>
         <form method="dialog" className="modal-backdrop">
