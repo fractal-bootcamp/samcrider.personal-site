@@ -3,47 +3,7 @@ import { Link } from "react-scroll";
 import SecretModal from "../Modal/component";
 import { Fields } from "./types";
 
-const NavBar = ({ setMessage }: Fields) => {
-  const [counter, setCounter] = useState<number>(0);
-
-  const handleClick = () => {
-    switch (counter) {
-      case 0:
-        setMessage((prev) => [
-          ...prev,
-          "I have no idea what you're trying to do, don't click that.",
-        ]);
-
-        setCounter(1);
-
-        break;
-      case 1:
-        setMessage((prev) => [
-          ...prev,
-          "Seriously, that button is off limits.",
-        ]);
-        setCounter(2);
-        break;
-
-      case 2:
-        setMessage((prev) => [...prev, "Nope, still off limits."]);
-        setCounter(3);
-        break;
-
-      case 3:
-        setMessage((prev) => [
-          ...prev,
-          "By the way, have you found the secret modal yet?",
-        ]);
-        setCounter(0);
-        break;
-
-      default:
-        setMessage((prev) => [...prev, ""]);
-        setCounter(0);
-    }
-  };
-
+const NavBar = ({ handleClick }: Fields) => {
   return (
     <div className="navbar bg-base-100 p-6">
       <div className="navbar-start">
