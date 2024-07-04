@@ -36,7 +36,7 @@ const Links = () => {
       >
         <a
           target="_blank"
-          href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTSDxBXQqrTllMsbpXZpWNkTkQSZrQshvzWTldlbSBFtqvHpRrRdrDkcpwzFFWLQWPZZDs"
+          href="mailto:samrobertcrider@gmail.com?subject=Your%20Subject&body=Your%20Message%20Here"
           className="w-96 h-96 flex justify-center items-center font-bold"
         >
           <img src="/gmail-mark.png" alt="gmail" className="h-[45%]" />
