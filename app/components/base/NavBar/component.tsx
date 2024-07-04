@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import SecretModal from "../Modal/component";
 
 const NavBar = () => {
   return (
@@ -87,7 +88,7 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn"></a>
+        <SecretModal />
       </div>
     </div>
   );
