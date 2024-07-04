@@ -18,7 +18,10 @@ const SecretModal = () => {
             If you've gotten this far, you're clearly interested ; )
             <br />
             Say hello at{" "}
-            <a className="text-[blue] underline" href="mailto:sam@crider.dev">
+            <a
+              className="text-[blue] underline"
+              href="mailto:samrobertcrider@gmail.com"
+            >
               samrobertcrider@gmail.com
             </a>
             <br />
