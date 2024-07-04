@@ -1,5 +1,6 @@
 import Stats from "~/components/base/Stats/component";
 import s from "./styles.module.css";
+import { motion } from "framer-motion";
 
 const Component = () => {
   return (
@@ -27,7 +28,14 @@ const Component = () => {
           </p>
         </div>
         <div className={s.imageDiv}>
-          <img src="/criderSelfie.PNG" alt="profileImage" className={s.image} />
+          <motion.img
+            whileHover={{ scale: 1.065 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            src="/criderSelfie.PNG"
+            alt="profileImage"
+            className={s.image}
+          />
         </div>
       </div>
       <Stats />

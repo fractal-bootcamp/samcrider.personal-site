@@ -1,5 +1,6 @@
 import ProjectCard from "~/components/base/ProjectCard/component";
 import { Fields } from "./types";
+import { motion } from "framer-motion";
 
 const Project = ({ project }: Fields) => {
   if (project.id % 2 === 0) {
@@ -9,21 +10,27 @@ const Project = ({ project }: Fields) => {
         <div className="timeline-middle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            className="h-6 w-6 shrink-0 stroke-current"
           >
             <path
-              fillRule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-              clipRule="evenodd"
-            />
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
           </svg>
         </div>
-        <div className="timeline-start md:text-end mb-10">
+        <motion.div
+          className="timeline-start md:text-end mb-10"
+          whileHover={{ scale: 1.225 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 17 }}
+        >
           <div className="font-mono italic">{project.timelineTitle}</div>
           <ProjectCard project={project} />
-        </div>
+        </motion.div>
         <hr />
       </li>
     );
@@ -34,21 +41,27 @@ const Project = ({ project }: Fields) => {
       <div className="timeline-middle">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          className="h-6 w-6 shrink-0 stroke-current"
         >
           <path
-            fillRule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-            clipRule="evenodd"
-          />
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
         </svg>
       </div>
-      <div className="timeline-end mb-10">
+      <motion.div
+        className="timeline-end mb-10"
+        whileHover={{ scale: 1.225 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      >
         <div className="font-mono italic">{project.timelineTitle}</div>
         <ProjectCard project={project} />
-      </div>
+      </motion.div>
       <hr />
     </li>
   );
