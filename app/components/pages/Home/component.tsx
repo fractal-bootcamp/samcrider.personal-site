@@ -3,12 +3,30 @@ import s from "./styles.module.css";
 import About from "../About";
 import NavBar from "~/components/base/NavBar/component";
 import Links from "~/components/compound/Links/component";
+import { useEffect, useState } from "react";
 
 const Component = () => {
+  const [message, setMessage] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (message.length > 0) {
+      setTimeout(() => {
+        setMessage((prev) => prev.slice(1));
+      }, 5000);
+    }
+  }, [message]);
+
   return (
     <div className={s.homeContainer} id="about">
       <div className="sticky top-0 z-10">
-        <NavBar />
+        <div className="toast toast-top toast-end items-end">
+          {message.map((msg, i) => (
+            <div key={i} className="alert bg-secondary w-fit">
+              <p>{msg}</p>
+            </div>
+          ))}
+        </div>
+        <NavBar setMessage={setMessage} />
       </div>
 
       <div className="pb-20">

@@ -20,10 +20,10 @@ const Component = () => {
             in Brooklyn, NY. I've been studing CS and writing code since 2022.
           </p>
           <p className="text-content">
-            When I'm not in at the computer, I'm likely to be found touching
-            grass and sometimes day dreaming about becoming one with the grass
-            on a sunny day. Something else I like to do is stretch, as my entire
-            body is broken from coding all day.
+            When I'm not at the computer, I'm likely to be found touching grass
+            and sometimes day dreaming about becoming one with the grass on a
+            sunny day. Something else I like to do is stretch, as my entire body
+            is broken from coding all day.
           </p>
         </div>
         <div className={s.imageDiv}>
