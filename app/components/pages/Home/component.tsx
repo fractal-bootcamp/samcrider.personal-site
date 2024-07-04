@@ -11,7 +11,6 @@ const Component = () => {
 
   useEffect(() => {
     if (message.length > 0) {
-      console.log(message);
       const timeout = setTimeout(() => {
         setMessage((prev) => prev.slice(1));
       }, 2500);
@@ -53,7 +52,7 @@ const Component = () => {
         break;
 
       default:
-        setMessage([""]);
+        setMessage([]);
         setCounter(0);
     }
   };
