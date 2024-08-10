@@ -8,9 +8,9 @@ const Component = () => {
       <div className={s.aboutContainer}>
         <div className={s.paragraphContainer}>
           <p className="text-content">
-            I graduated from North Carolina State University with honors in
-            Spring '24. My degree is in Human Biology. Currently, I am enrolled
-            in the{" "}
+            I graduated from North Carolina State University with highest honors
+            in Spring '24. My degree is in Human Biology. Currently, I am
+            enrolled in the{" "}
             <a
               className="text-accent"
               target="_blank"

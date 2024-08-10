@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Links = () => {
   return (
-    <div className="flex flex-row justify-center">
+    <div className="flex flex-row flex-wrap justify-center">
       <motion.div
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.9 }}
