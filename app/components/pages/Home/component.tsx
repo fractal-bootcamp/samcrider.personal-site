@@ -26,7 +26,9 @@ const Component = ({ message, handleClick }: Fields) => {
       <div className={s.projectPage} id="projects">
         <div className={s.titleContainer}>
           <p className={s.title}>
-            <span className="text-content">Projects</span>
+            <span className="text-content text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
+              Projects
+            </span>
           </p>
         </div>
         <div className="pb-20">
