@@ -58,11 +58,25 @@ const NavBar = ({ handleClick }: Fields) => {
           </ul>
         </div>
         <div className="hidden lg:flex lg:navbar-start">
-          <a className="btn btn-ghost text-xl">Sam Crider</a>
+          <Link
+            to="about"
+            smooth
+            duration={500}
+            className="btn btn-ghost text-xl"
+          >
+            Sam Crider
+          </Link>
         </div>
       </div>
       <div className="navbar-center lg:hidden">
-        <a className="btn btn-ghost text-xl">Sam Crider</a>
+        <Link
+          to="about"
+          smooth
+          duration={500}
+          className="btn btn-ghost text-xl"
+        >
+          Sam Crider
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal font-semibold px-1">

@@ -5,7 +5,7 @@ import { Fields } from "./types";
 const Component = ({ projects }: Fields) => {
   return (
     <ul
-      className={`timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ${s.timeline} ${s.timelineContainer}`}
+      className={`timeline timeline-snap-icon max-md:timeline-compact items-center timeline-vertical ${s.timeline} ${s.timelineContainer}`}
     >
       {projects.map((project) => {
         // handleTimelineFlip();

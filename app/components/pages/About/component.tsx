@@ -1,12 +1,11 @@
 import Stats from "~/components/base/Stats/component";
-import s from "./styles.module.css";
 import { motion } from "framer-motion";
 
 const Component = () => {
   return (
-    <div className={s.topContainer}>
-      <div className={s.aboutContainer}>
-        <div className={s.paragraphContainer}>
+    <div className="flex flex-col justify-center gap-6 h-full">
+      <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col flex-1 text-md md:text-xl lg:text-2xl text-center lg:text-left justify-center px-6 md:px-12 lg:px-20 gap-6">
           <p className="text-content">
             I graduated from North Carolina State University with highest honors
             in Spring '24. My degree is in Human Biology. Currently, I am
@@ -27,14 +26,14 @@ const Component = () => {
             is broken from coding all day.
           </p>
         </div>
-        <div className={s.imageDiv}>
+        <div className={`hidden lg:flex flex-1 justify-center`}>
           <motion.img
             whileHover={{ scale: 1.065 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             src="/criderSelfie.PNG"
             alt="profileImage"
-            className={s.image}
+            className="h-[90%] w-[40%] rounded-xl"
           />
         </div>
       </div>
