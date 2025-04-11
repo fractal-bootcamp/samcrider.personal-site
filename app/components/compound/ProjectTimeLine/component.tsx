@@ -1,17 +1,50 @@
-import Project from "~/components/compound/Project/component";
-import s from "./styles.module.css";
+import { motion } from "framer-motion";
 import { Fields } from "./types";
 
 const Component = ({ projects }: Fields) => {
   return (
-    <ul
-      className={`timeline timeline-snap-icon max-md:timeline-compact items-center timeline-vertical ${s.timeline} ${s.timelineContainer}`}
-    >
-      {projects.map((project) => {
-        // handleTimelineFlip();
-        return <Project key={project.id} project={project} />;
-      })}
-    </ul>
+    <div className="grid gap-8">
+      {projects.map((project) => (
+        <motion.div
+          key={project.id}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: project.id * 0.1 }}
+          className="bg-neutral/60 border border-primary/20 rounded-md overflow-hidden"
+        >
+          <div className="p-6">
+            <h3 className="text-xl font-terminal text-secondary mb-2">
+              {project.title} - {project.date}
+            </h3>
+            <p className="text-secondary/70 mb-4">{project.description}</p>
+            <div className="flex space-x-3">
+              {project.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="text-xs px-2 py-1 bg-primary/20 rounded border border-primary/10"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="bg-base-100/30 p-4 flex justify-between items-center border-t border-primary/10">
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary hover:text-accent transition-colors font-terminal"
+            >
+              view-source
+            </a>
+            <a className="disabled opacity-50 text-sm text-primary  transition-colors font-terminal">
+              live-demo
+            </a>
+          </div>
+        </motion.div>
+      ))}
+    </div>
   );
 };
 

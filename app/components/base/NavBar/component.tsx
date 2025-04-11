@@ -6,110 +6,136 @@ import styles from "./styles.module.css";
 
 const NavBar = ({ handleClick }: Fields) => {
   return (
-    <div className={`navbar bg-base-100 p-6 ${styles.navbar}`}>
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+    <div className="terminal-navbar border-b-2 border-primary bg-base-100 p-2">
+      <div className="flex items-center justify-between">
+        <div className="lg:flex-1">
+          <div className="dropdown">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost border-2 border-primary text-primary lg:hidden px-2 hover:bg-neutral"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+              <span className="text-secondary">{"[menu]"}</span>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm font-terminal dropdown-content bg-base-100 border-2 border-primary rounded-none z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <Link
+                  to="about"
+                  smooth
+                  duration={500}
+                  className="text-secondary hover:text-primary"
+                >
+                  <span className="text-primary">~$</span> cd about
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-secondary hover:text-primary opacity-50 pointer-events-none"
+                  onClick={handleClick}
+                  to="thoughts"
+                  smooth
+                  duration={500}
+                >
+                  <span className="text-primary">~$</span> cd thoughts
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="projects"
+                  smooth
+                  duration={500}
+                  className="text-secondary hover:text-primary"
+                >
+                  <span className="text-primary">~$</span> cd projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="connect"
+                  smooth
+                  duration={500}
+                  className="text-secondary hover:text-primary"
+                >
+                  <span className="text-primary">~$</span> cd connect
+                </Link>
+              </li>
+            </ul>
           </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content font-semibold bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-          >
-            <li>
-              <Link to="about" smooth duration={500}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="opacity-50 pointer-events-none"
-                onClick={handleClick}
-                to="thoughts"
-                smooth
-                duration={500}
-              >
-                Thoughts
-              </Link>
-            </li>
-            <li>
-              <Link to="projects" smooth duration={500}>
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link to="connect" smooth duration={500}>
-                Connect
-              </Link>
-            </li>
-          </ul>
+          <div className="hidden lg:flex">
+            <Link
+              to="about"
+              smooth
+              duration={500}
+              className="btn btn-ghost text-secondary hover:text-primary py-0 px-4 border-2 border-primary rounded-none"
+            >
+              <span className="text-primary font-bold mr-2">[TERM]</span>{" "}
+              sam@crider:~
+            </Link>
+          </div>
         </div>
-        <div className="hidden lg:flex lg:navbar-start">
+        <div className="flex-1 lg:hidden text-center">
           <Link
             to="about"
             smooth
             duration={500}
-            className="btn btn-ghost text-xl"
+            className="btn btn-ghost text-secondary py-0 px-4 border-2 border-primary rounded-none"
           >
-            Sam Crider
+            <span className="text-primary font-bold mr-2">[TERM]</span>{" "}
+            sam@crider:~
           </Link>
         </div>
-      </div>
-      <div className="navbar-center lg:hidden">
-        <Link
-          to="about"
-          smooth
-          duration={500}
-          className="btn btn-ghost text-xl"
-        >
-          Sam Crider
-        </Link>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal font-semibold px-1">
-          <li>
-            <Link to="about" smooth duration={500}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={handleClick}
-              className="opacity-50 pointer-events-none"
-              to="thoughts"
-              smooth
-              duration={500}
-            >
-              Thoughts
-            </Link>
-          </li>
-          <li>
-            <Link to="projects" smooth duration={500}>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link to="connect" smooth duration={500}>
-              Connect
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div className="navbar-end">
-        <SecretModal />
+        <div className="navbar-center hidden lg:flex flex-1 justify-center">
+          <ul className="flex space-x-2 font-terminal">
+            <li className="terminal-tab border-2 border-primary px-3 py-1 hover:bg-neutral transition-colors">
+              <Link
+                to="about"
+                smooth
+                duration={500}
+                className="text-secondary hover:text-primary"
+              >
+                <span className="text-primary">~$</span> cd about
+              </Link>
+            </li>
+            <li className="terminal-tab border-2 border-primary px-3 py-1 opacity-50 pointer-events-none">
+              <Link
+                onClick={handleClick}
+                to="thoughts"
+                smooth
+                duration={500}
+                className="text-secondary"
+              >
+                <span className="text-primary">~$</span> cd thoughts
+              </Link>
+            </li>
+            <li className="terminal-tab border-2 border-primary px-3 py-1 hover:bg-neutral transition-colors">
+              <Link
+                to="projects"
+                smooth
+                duration={500}
+                className="text-secondary hover:text-primary"
+              >
+                <span className="text-primary">~$</span> cd projects
+              </Link>
+            </li>
+            <li className="terminal-tab border-2 border-primary px-3 py-1 hover:bg-neutral transition-colors">
+              <Link
+                to="connect"
+                smooth
+                duration={500}
+                className="text-secondary hover:text-primary"
+              >
+                <span className="text-primary">~$</span> cd connect
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="flex-1 flex justify-end">
+          <div className="text-primary mr-2 animate-terminal-blink">█</div>
+          <SecretModal />
+        </div>
       </div>
     </div>
   );
