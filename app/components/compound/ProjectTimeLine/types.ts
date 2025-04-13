@@ -7,6 +7,7 @@ export type Project = {
   title: string;
   description: string;
   date: string;
-  link: string;
+  sourceLink: string;
+  demoLink: string;
   technologies: string[];
 };

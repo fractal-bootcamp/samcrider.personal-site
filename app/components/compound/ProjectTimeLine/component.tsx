@@ -31,16 +31,27 @@ const Component = ({ projects }: Fields) => {
           </div>
           <div className="bg-base-100/30 p-4 flex justify-between items-center border-t border-primary/10">
             <a
-              href={project.link}
+              href={project.sourceLink}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-primary hover:text-accent transition-colors font-terminal"
             >
               view-source
             </a>
-            <a className="disabled opacity-50 text-sm text-primary  transition-colors font-terminal">
-              live-demo
-            </a>
+            {project.demoLink ? (
+              <a
+                href={project.demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-primary hover:text-accent transition-colors font-terminal"
+              >
+                live-demo
+              </a>
+            ) : (
+              <span className="text-sm text-primary/50 font-terminal">
+                live-demo
+              </span>
+            )}
           </div>
         </motion.div>
       ))}
